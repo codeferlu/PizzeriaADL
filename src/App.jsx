@@ -22,11 +22,11 @@ const App = () => {
 fetchPizzas()
   }, [])
   return (
-<ContextApp.Provider value={{carritoPizzas, setCarritoPizzas}}>
+<ContextApp.Provider value={{dataPizzas, setDataPizzas, carritoPizzas, setCarritoPizzas}}>
   <Navbar/>
 <Routes>
   <Route path="/" element={<Home/>}/>
-  <Route path="/pizzas/:selectedPizzas" element={<Pizzas data={dataPizzas}/>}/>
+  <Route path="/pizzas" element={<Pizzas data={dataPizzas}/>}/>
   <Route path="/carrito" element={<Carrito/>}/>
   <Route path="*" element={<Error/>}/>
 </Routes>
