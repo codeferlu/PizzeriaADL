@@ -3,45 +3,27 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { ContextApp } from '../App';
 
-const Carrito = (props) => {
+const Carrito = () => {
   const c = useContext(ContextApp)
-  const [productsCarrito, setProductsCarrito] = useState([])
-
-  const calculatePizzas = () => {
-
-  }
-
-  useEffect (() => {
-    const pizzas = []
-    c.dataPizzas.forEach(pizza =>{
-      pizzas.push({...pizza, count: 0})
+  const getTotal = () => {
+    let total = 0
+    c.dataPizzas.forEach((pizza) => {
+      total = total + (pizza.price * pizza.count)
     })
-    setProductsCarrito(pizzas)
-  }, [])
-
-  useEffect(() => {
-    const newPizzas = []
-    c.carritoPizzas.forEach((pz) => { 
-    productsCarrito.forEach((pPz) => {
-      if (pPz.name == pz){
-        newPizzas.push({...pPz, count: pPz.count + 1 })
-      }
-    });
-  });
-  setProductsCarrito(newPizzas);
-  }, [c.carritoPizzas]);
-  
-
+    return total
+  }
   return (
-    <div>
-      <h2>Este es un componente simple de carrito</h2>
-      <ul>
+    <>
+    <h1>Carrito</h1>
+    <ul>
       {
-        productsCarrito.map((pizzas) => <li>{pizzas.name} ${pizzas.price}</li>)
+        c.dataPizzas.map((pizza) => <li>{pizza.name} ${pizza.count} x ${pizza.price}</li>)
       }
-      </ul>
-    </div>
-  );
+    </ul>
+    <p>Total: ${ getTotal() }</p>
+    </>
+  )
 }
+
 
 export default Carrito;
