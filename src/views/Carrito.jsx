@@ -18,6 +18,16 @@ const Carrito = (props) => {
     })
     setProductsCarrito(pizzas)
   }, [])
+
+  useEffect(() => {
+const newPizzas = []
+c.carritoPizzas.forEach((pz) => {
+  productsCarrito.forEach((pPz) => {
+    if (pPz.name == pz){
+      newPizzas.push({...pPz, count: pPz.count +1 })
+    }
+  })
+}, [c.carritoPizzas])
   return (
     <div>
       <h2>Este es un componente simple de carrito</h2>
@@ -28,6 +38,6 @@ const Carrito = (props) => {
       </ul>
     </div>
   );
-};
+},
 
-export default Carrito;
+export default Carrito
