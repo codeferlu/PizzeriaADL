@@ -1,32 +1,32 @@
 // App.jsx
-import React from 'react';
-import { PizzaProvider } from './context/PizzaContext';
-import {BrowserRouter, Route, Routes, Link } from 'react-router-dom'
+import  { useEffect, useState } from 'react';
 import Pizzas from './views/Pizzas'
-import Navbar from './components/Navbar'
 import Home from './views/Home'
 import Carrito from './views/Carrito'
-const App = () => {
-  return (
-    <PizzaProvider>
-      <Navbar/>
-        <BrowserRouter>
-          <Routes>
-          <Route path='/home'>
-<Home/>
-           </Route>
-            <Route path='/pizzas'>
-<Pizzas/>
-           </Route>
-           <Route path='/carrito'>
-<Carrito/>
-           </Route>
-        </Routes>
-      </BrowserRouter>
-     
-  
+import Error from './views/Error'
+import {Route, Routes} from 'react-router'
 
-    </PizzaProvider>
+const App = () => {
+  const [selectedPizza, setSelectedPizza] = useState("napolitana")
+  const [dataPizzas, setDataPizzas] = useState([])
+
+  const fetchPizzas = async () =>  {
+     const data = await fetch("/pizzas.json")
+     const res = await data.json();
+     setDataPizzas(res);
+  }
+  useEffect (() => {
+fetchPizzas
+  }, [])
+  return (
+<>
+<Routes>
+  <Route path="/" element={<Home/>}/>
+  <Route path="/pizzas/:selectedPizza" element={<Pizzas data={dataPizzas}/>}/>
+  <Route path="/carrito" element={<Carrito/>}/>
+  <Route path="*" element={<Error/>}/>
+</Routes>
+</>
   );
 };
 

@@ -1,7 +1,7 @@
-// SimpleComponent.jsx
+
 import React from 'react';
 
-const Carrito = () => {
+const Carrito = (props) => {
   return (
     <div>
       <h2>Este es un componente simple de carrito</h2>
