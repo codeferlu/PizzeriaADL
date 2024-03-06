@@ -9,9 +9,13 @@ const Pizzas = (props) => {
     <ul>
     {
       props.data.map((pizza) =>
-      
+
       <PizzaCard 
       name={pizza.name}
+      img={pizza.img}
+      desc={pizza.desc}
+      ingredients={pizza.ingredients}
+      price={pizza.price}
       />
   )
     }
@@ -21,3 +25,4 @@ const Pizzas = (props) => {
   );
 };
 export default Pizzas;
+
