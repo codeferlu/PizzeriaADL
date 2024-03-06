@@ -20,24 +20,28 @@ const Carrito = (props) => {
   }, [])
 
   useEffect(() => {
-const newPizzas = []
-c.carritoPizzas.forEach((pz) => {
-  productsCarrito.forEach((pPz) => {
-    if (pPz.name == pz){
-      newPizzas.push({...pPz, count: pPz.count +1 })
-    }
-  })
-}, [c.carritoPizzas])
+    const newPizzas = []
+    c.carritoPizzas.forEach((pz) => { 
+    productsCarrito.forEach((pPz) => {
+      if (pPz.name == pz){
+        newPizzas.push({...pPz, count: pPz.count + 1 })
+      }
+    });
+  });
+  setProductsCarrito(newPizzas);
+  }, [c.carritoPizzas]);
+  
+
   return (
     <div>
       <h2>Este es un componente simple de carrito</h2>
       <ul>
       {
-        c.carritoPizzas.map((pizzas) => <li>{pizzas} ${price}</li>)
+        productsCarrito.map((pizzas) => <li>{pizzas.name} ${pizzas.price}</li>)
       }
       </ul>
     </div>
   );
-},
+}
 
-export default Carrito
+export default Carrito;

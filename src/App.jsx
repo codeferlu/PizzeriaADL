@@ -27,6 +27,7 @@ fetchPizzas()
 <Routes>
   <Route path="/" element={<Home/>}/>
   <Route path="/pizzas" element={<Pizzas data={dataPizzas}/>}/>
+  <Route path="/pizzas/:pizzas" element={<Pizzas data={dataPizzas}/>}/>
   <Route path="/carrito" element={<Carrito/>}/>
   <Route path="*" element={<Error/>}/>
 </Routes>
