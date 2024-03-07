@@ -1,12 +1,16 @@
 import { NavLink } from "react-router-dom";
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
-const Navbar = (props) => {
+const Header = (props) => {
     return (
-        <nav>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/pizzas">Pizzas</NavLink>
-            <NavLink to="/carrito">Carrito</NavLink>
-        </nav>
+        <Navbar className="bg-body-tertiary">
+             <Container>
+            <NavLink to="/">Pizzeria ADL</NavLink>
+            <NavLink to="/pizzas">Nuestro Catalogo</NavLink>
+            <NavLink to="/carrito">Carrito - Lleva tu Pizza</NavLink>
+            </Container>
+        </Navbar>
     )
 }
-export default Navbar
+export default Header

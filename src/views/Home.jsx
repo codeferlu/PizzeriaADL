@@ -4,7 +4,9 @@ import React from 'react';
 const Home = (props) => {
   return (
 <>
-<h1>Soy Home</h1>  
+<div className='container'>
+<h1 className='ache1'>Pizzeria ADL</h1>  
+</div>
 </>
   );
 };
