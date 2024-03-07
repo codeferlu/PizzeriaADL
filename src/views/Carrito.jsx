@@ -14,13 +14,15 @@ const Carrito = () => {
   }
   return (
     <>
+    <div className='cajacarrito'>
     <h1>Carrito</h1>
-    <ul>
+    <ul className='ulcarrito'>
       {
-        c.dataPizzas.map((pizza) => <li>{pizza.name} ${pizza.count} x ${pizza.price}</li>)
+        c.dataPizzas.map((pizza) => <li>{pizza.name} Cantidad:{pizza.count} x ${pizza.price}</li>)
       }
     </ul>
     <p>Total: ${ getTotal() }</p>
+    </div>
     </>
   )
 }

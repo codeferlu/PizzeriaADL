@@ -30,4 +30,26 @@ body, html {
 
 .ache1 {
     text-align: center;
+    height: 100%;
+    margin-top: 20%;
+    color:rgb(216, 199, 199); 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 100px; font-weight: 300; 
+    line-height: 32px; 
+
+}
+
+.cajacarrito {
+    color:rgb(216, 199, 199); 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 30px; font-weight: 300; 
+    line-height: 32px; 
+    margin: 0 0 72px; 
+    text-align: center;
+    height: 100vh;
+    margin-top: 5vh;
+   
+}
+.ulcarrito{
+    list-style: none;
 }
