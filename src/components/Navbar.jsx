@@ -4,11 +4,11 @@ import Container from 'react-bootstrap/Container';
 
 const Header = (props) => {
     return (
-        <Navbar className="bg-body-tertiary">
+        <Navbar bg="dark" data-bs-theme="dark">
              <Container>
-            <NavLink to="/">Pizzeria ADL</NavLink>
-            <NavLink to="/pizzas">Nuestro Catalogo</NavLink>
-            <NavLink to="/carrito">Carrito - Lleva tu Pizza</NavLink>
+            <NavLink to="/" style={{ textDecoration: 'none' }}>Pizzeria ADL</NavLink>
+            <NavLink to="/pizzas" style={{ textDecoration: 'none' }}>Nuestro Catalogo</NavLink>
+            <NavLink to="/carrito" style={{ textDecoration: 'none' }}>Carrito - Lleva tu Pizza</NavLink>
             </Container>
         </Navbar>
     )
