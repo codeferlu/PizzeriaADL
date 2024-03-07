@@ -7,7 +7,7 @@ let {selectedPizza} = useParams()
 
     <>
     <h2>{props.from == "home" ? "Pizzas destacadas": "Nuestro Catalogo"}</h2>
-    <ul>
+    <ul className="cajacatalogo">
     {
       props.data.map((pizza, index) =>{
         if (

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useContext } from 'react';
 import { ContextApp } from '../App';
 
+
 const Carrito = () => {
   const c = useContext(ContextApp)
   const getTotal = () => {
@@ -16,11 +17,13 @@ const Carrito = () => {
     <>
     <div className='cajacarrito'>
     <h1>Carrito</h1>
+      
     <ul className='ulcarrito'>
       {
-        c.dataPizzas.map((pizza) => <li>{pizza.name} Cantidad:{pizza.count} x ${pizza.price}</li>)
+        c.dataPizzas.map((pizza) =>  <li>{pizza.name} Cantidad:{pizza.count} x ${pizza.price}</li>)
       }
     </ul>
+      
     <p>Total: ${ getTotal() }</p>
     </div>
     </>

@@ -21,10 +21,10 @@ c.setDataPizzas(updatedPizzas)
 }
 
     return (
-  <div className="caja">
+  
         <li className="li">
-        <ul className="ul">
-            <Card border="light" className="bg-dark text-white box" style={{ width: '10rem', margin: '0.5rem' } }>
+        <ul className="ulcard">
+            <Card border="light" className="bg-dark text-white box" style={{ width: '13rem', margin: '0.2rem' } }>
                 <Card.Img variant="top" src={props.img} />
                 <Card.Body>
                     <Card.Title>{props.name}</Card.Title>
@@ -41,7 +41,7 @@ c.setDataPizzas(updatedPizzas)
             </Card>
         </ul>
     </li>
-    </div>
+   
 
     );
   };

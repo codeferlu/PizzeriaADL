@@ -7,18 +7,19 @@ body, html {
 
 .li {
     list-style: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap; /* Para que las cartas se envuelvan si no caben en una sola fila */
+    display: flex; /* Ajustar el contenedor de las cartas para usar flexbox */
+    flex-wrap: wrap; /* Permitir que las cartas se envuelvan si no caben en una sola fila */
+    justify-content: space-around; /* Distribuir el espacio entre las cartas de manera uniforme */
 
 }
-.ul {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-     padding: 0;
-     margin: 0;
-     list-style: none;
+.cajacatalogo {
+
+    display: flex; /* Ajustar el contenedor de las cartas para usar flexbox */
+    flex-wrap: wrap; /* Permitir que las cartas se envuelvan si no caben en una sola fila */
+    justify-content: space-around; /* Distribuir el espacio entre las cartas de manera uniforme */
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .container {
@@ -29,27 +30,29 @@ body, html {
 }
 
 .ache1 {
-    text-align: center;
-    height: 100%;
-    margin-top: 20%;
-    color:rgb(216, 199, 199); 
-    font-family: 'Open Sans', sans-serif; 
-    font-size: 100px; font-weight: 300; 
-    line-height: 32px; 
+    color: #eceaea; 
+    font-family: 'Helvetica Neue', sans-serif; 
+    font-size: 150px; font-weight: bold; 
+    letter-spacing: -1px; 
+    line-height: 1; 
+    text-align: center; 
+    margin-top: 13vh;
 
 }
 
 .cajacarrito {
-    color:rgb(216, 199, 199); 
-    font-family: 'Open Sans', sans-serif; 
-    font-size: 30px; font-weight: 300; 
-    line-height: 32px; 
-    margin: 0 0 72px; 
-    text-align: center;
-    height: 100vh;
-    margin-top: 5vh;
-   
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 20px; /* Espaciado interno */
+    width: 350px; /* Ancho del contenedor */
+    margin: 0 auto;/* Centrar horizontalmente */
+    margin-top: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 .ulcarrito{
     list-style: none;
+    
+  
+    
 }
+
