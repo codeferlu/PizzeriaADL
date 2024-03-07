@@ -1,0 +1,8 @@
+.li {
+    list-style: none;
+}
+.cajacarta {
+    display: flex;
+    flex-direction:column;
+    gap: 15px;
+    }
